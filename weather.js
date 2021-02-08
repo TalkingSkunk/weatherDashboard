@@ -82,7 +82,7 @@ async function getCoordinates(city, country) {
         let forecastTime = new Date(forecast.list[i].dt * 1000).toLocaleDateString('en-US');
 
         document.querySelector('#weatherInfo2').innerHTML +=
-            `<div class="card col-md col-6">
+            `<div class="card col-md col-6" style="background-color:#006666; color:white;">
                 <div class="card-body">
                 <p class="card-text">
                 ${forecastTime}
@@ -110,7 +110,7 @@ async function getCoordinates(city, country) {
     let currentTime = new Date(current.current.dt * 1000);
     // display current weather
     document.querySelector('#weatherInfo').innerHTML =
-        `<div class="card">
+        `<div class="card" style="background-color:#004080; color:white;">
             <div class="card-header"><h1>${cityUpper}, ${countryUpper}</h1><br/><h4>${currentTime}</h4><img src="http://openweathermap.org/img/w/${current.current.weather[0].icon}.png" alt="Weather icon" /></div>
             <div class="card-body">
                 <h5>Temperature: ${current.current.temp} &#8451;
