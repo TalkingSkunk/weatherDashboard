@@ -31,7 +31,7 @@ function searchWeather(event) {
 function saveWeather(city, country) {
     console.log(`[arraySaved3] ${arraySaved}`);
     console.log(`saving...`);
-    let arrayCheck = arraySaved.includes(`"${city}, ${country}"`);
+    let arrayCheck = arraySaved.includes(`${city}, ${country}`);
     console.log(`checking if already saved...[${arrayCheck}]`);
     if (!arrayCheck) {
         arraySaved.push(`${city}, ${country}`);
