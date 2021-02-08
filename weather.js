@@ -1,11 +1,16 @@
-let arraySaved = JSON.parse(localStorage.getItem("myArray"));
+let array = localStorage.getItem("myArray");
+console.log(`[array] ${array}`);
 //if there is no array set up already...
-if (!arraySaved) {
-    localStorage.setItem("myArray", "[]");
+if (!array) {
+    localStorage.setItem("myArray", "[]"); //set up an empty array
+    console.log(`[array2] ${array}`);
 };
+let arraySaved = JSON.parse(localStorage.getItem("myArray"));
 // If browser reloads, load the saved places
-if (location.reload){
+if (location.reload) {
     keepSaved();
+}
+
 
 function searchWeather(event) {
     event.preventDefault();
@@ -24,6 +29,7 @@ function searchWeather(event) {
 }
 
 function saveWeather(city, country) {
+    console.log(`[arraySaved3] ${arraySaved}`);
     console.log(`saving...`);
     let arrayCheck = arraySaved.includes(`"${city}, ${country}"`);
     console.log(`checking if already saved...[${arrayCheck}]`);
