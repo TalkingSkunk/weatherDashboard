@@ -3,7 +3,7 @@ console.log(`[array] ${array}`);
 //if there is no array set up already...
 if (!array) {
     localStorage.setItem("myArray", "[]"); //set up an empty array
-    console.log(`[array2] ${array}`);
+    console.log(`[empty array] ${array}`);
 };
 let arraySaved = JSON.parse(localStorage.getItem("myArray"));
 // If browser reloads, load the saved places
@@ -29,7 +29,7 @@ function searchWeather(event) {
 }
 
 function saveWeather(city, country) {
-    console.log(`[arraySaved3] ${arraySaved}`);
+    console.log(`[arraySaved] ${arraySaved}`);
     console.log(`saving...`);
     let arrayCheck = arraySaved.includes(`${city}, ${country}`);
     console.log(`checking if already saved...[${arrayCheck}]`);
@@ -82,7 +82,7 @@ async function getCoordinates(city, country) {
         let forecastTime = new Date(forecast.list[i].dt * 1000).toLocaleDateString('en-US');
 
         document.querySelector('#weatherInfo2').innerHTML +=
-            `<div class="card col">
+            `<div class="card col-md col-6">
                 <div class="card-body">
                 <p class="card-text">
                 ${forecastTime}
