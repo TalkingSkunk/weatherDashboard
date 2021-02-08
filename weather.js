@@ -78,7 +78,8 @@ async function getCoordinates(city, country) {
     //display forecasts
     let forecastedDays = forecast.list.length;
     for (let i = 7; i < forecastedDays; i += 8) {
-        let forecastTime = new Date(forecast.list[i].dt * 1000); //dates for forecasts
+        //unix time converted with a method for forecasts
+        let forecastTime = new Date(forecast.list[i].dt * 1000).toLocaleDateString('en-US');
 
         document.querySelector('#weatherInfo2').innerHTML +=
             `<div class="card col">
