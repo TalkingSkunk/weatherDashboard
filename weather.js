@@ -84,17 +84,17 @@ async function getCoordinates(city, country) {
         document.querySelector('#weatherInfo2').innerHTML +=
             `<div class="card col-md col-6" style="background-color:#006666; color:white;">
                 <div class="card-body">
-                <p class="card-text">
-                ${forecastTime}
-                <br />
-                <img src="http://openweathermap.org/img/w/${forecast.list[i].weather[0].icon}.png" alt="Weather icon" />
-                <br />
-                temp: ${forecast.list[i].main.temp} &#8451;
-                <br />
-                Humidity: ${forecast.list[i].main.humidity} %
-                <br />
-                pressure: ${forecast.list[i].main.pressure} hPa
-                </p>
+                    <p class="card-text">
+                    ${forecastTime}
+                    <br />
+                    <img src="http://openweathermap.org/img/w/${forecast.list[i].weather[0].icon}.png" alt="Weather icon" />
+                    <br />
+                    temp: ${forecast.list[i].main.temp} &#8451;
+                    <br />
+                    Humidity: ${forecast.list[i].main.humidity} %
+                    <br />
+                    pressure: ${forecast.list[i].main.pressure} hPa
+                    </p>
                 </div>
             </div>`
     }
