@@ -1,10 +1,10 @@
 # Homework5
 
 **Deployed application URL**
-https://talkingskunk.github.io/homework6-weatherDashboard/
+https://talkingskunk.github.io/weatherDashboard/
 
 **GitHub Repository URL**
-https://github.com/TalkingSkunk/homework6-weatherDashboard/
+https://github.com/TalkingSkunk/weatherDashboard/
 
 
 ## Table of Contents
